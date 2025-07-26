@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://dk2c3arspmnbg"]
+[gd_scene load_steps=30 format=3 uid="uid://dk2c3arspmnbg"]
 
 [ext_resource type="Script" uid="uid://xfcsac8bkkbo" path="res://codigo/jugador.gd" id="1_6smm8"]
 [ext_resource type="Texture2D" uid="uid://6oy7hy7yoax4" path="res://recursos/sprites/knight.png" id="1_ht635"]
+[ext_resource type="Script" uid="uid://bbbcu2baqeyuh" path="res://codigo/procesar_llegar_a_final_del_nivel.gd" id="3_njcx7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpodt"]
 atlas = ExtResource("1_ht635")
@@ -205,3 +206,6 @@ autoplay = "reposo"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_p8tnr")
+
+[node name="ProcesarLlegarAFinalDelNivel" type="Node" parent="."]
+script = ExtResource("3_njcx7")
