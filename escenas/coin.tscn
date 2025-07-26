@@ -112,6 +112,8 @@ shape = SubResource("CircleShape2D_dbkwt")
 
 [node name="SonidoMoneda" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_3r7re")
+volume_db = -9.972
+pitch_scale = 0.8
 bus = &"Efectos"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
