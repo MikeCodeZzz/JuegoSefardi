@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlt7kknnuvxea"]
+[gd_scene load_steps=3 format=3 uid="uid://dlt7kknnuvxea"]
 
 [ext_resource type="AudioStream" uid="uid://bb7b4dd8kdehk" path="res://recursos/music/Estrella - House of the Gipsies.mp3" id="1_n2oxw"]
+[ext_resource type="Script" uid="uid://5k42wsmmn74i" path="res://codigo/musica.gd" id="2_wgc43"]
 
 [node name="Musica" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_n2oxw")
 volume_db = -8.008
 autoplay = true
 bus = &"Musica"
+script = ExtResource("2_wgc43")
