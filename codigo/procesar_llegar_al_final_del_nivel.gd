@@ -1,6 +1,7 @@
 extends Node
 
 func _ready() -> void:
+	InputManager.input_enabled = true
 	var minecart = get_tree().get_current_scene().get_node_or_null("minecart")
 	if minecart:
 		minecart.meta_activada.connect(_on_meta_activada)
@@ -9,4 +10,4 @@ func _ready() -> void:
 	
 func _on_meta_activada() -> void:
 	InputManager.input_enabled = false
-	get_parent().velocity = Vector2.ZERO	
+	get_parent().velocity = Vector2.ZERO

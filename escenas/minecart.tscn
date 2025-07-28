@@ -10,6 +10,7 @@ size = Vector2(86, 61)
 [node name="minecart" type="Sprite2D"]
 texture = ExtResource("1_g1w8q")
 script = ExtResource("2_s0opj")
+escena_a_cargar = "uid://cx4ncql3q42kw"
 musica_final = ExtResource("3_4xxhs")
 
 [node name="Area2D" type="Area2D" parent="."]

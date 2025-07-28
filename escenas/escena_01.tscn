@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://cx4ncql3q42kw"]
 
 [ext_resource type="PackedScene" uid="uid://dk2c3arspmnbg" path="res://escenas/jugador.tscn" id="1_3rnr5"]
-[ext_resource type="Script" uid="uid://17w1jrgffy0h" path="res://codigo/game_manager.gd" id="1_xepe4"]
+[ext_resource type="Script" uid="uid://cwgq34g6msq0m" path="res://game_manager.gd" id="1_ia7rc"]
 [ext_resource type="Texture2D" uid="uid://b2mx372vo0e2b" path="res://recursos/sprites/world_tileset.png" id="2_rb8nh"]
 [ext_resource type="PackedScene" uid="uid://cpwu7yrq05lir" path="res://escenas/plataforma.tscn" id="3_5rd3o"]
 [ext_resource type="Texture2D" uid="uid://chja0nftxn0gw" path="res://otros-recursos/Arbol/PNG/Tiles/trunk_side.png" id="3_t4v11"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bskocwxl5lbyy" path="res://otros-recursos/Arbol/PNG/Tiles/leaves_transparent.png" id="5_33nuj"]
 [ext_resource type="PackedScene" uid="uid://d2swgwrkkar8w" path="res://escenas/zona_de_muerte.tscn" id="7_npubw"]
 [ext_resource type="PackedScene" uid="uid://cwgq4bfdfnrac" path="res://escenas/minecart.tscn" id="10_im88q"]
+[ext_resource type="PackedScene" uid="uid://dlt7kknnuvxea" path="res://escenas/musica.tscn" id="11_ia7rc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5i3hb"]
 texture = ExtResource("2_rb8nh")
@@ -293,18 +294,13 @@ _data = {
 &"movimiento-plataforma": SubResource("Animation_3suha")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1p17m"]
-content_margin_left = 3.0
-content_margin_top = 1.0
-content_margin_right = 0.0
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kgr4o"]
 
 [node name="Escena01" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_xepe4")
+script = ExtResource("1_ia7rc")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -359,12 +355,11 @@ position = Vector2(0, -7)
 zoom = Vector2(4, 4)
 
 [node name="EtiquetaPuntuacion" type="Label" parent="Jugador/Camera2D"]
-offset_left = -140.0
-offset_top = -77.0
-offset_right = -100.0
-offset_bottom = -54.0
+offset_left = -141.0
+offset_top = -78.0
+offset_right = -98.0
+offset_bottom = -55.0
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1p17m")
 text = "Score"
 
 [node name="Coin" parent="." instance=ExtResource("4_puiuk")]
@@ -397,3 +392,5 @@ shape = SubResource("WorldBoundaryShape2D_kgr4o")
 [node name="minecart" parent="." instance=ExtResource("10_im88q")]
 position = Vector2(201, -55)
 scale = Vector2(0.160005, 0.160005)
+
+[node name="Musica" parent="." instance=ExtResource("11_ia7rc")]

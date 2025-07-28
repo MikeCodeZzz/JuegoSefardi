@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -300.0
 @onready var salto: AudioStreamPlayer2D = $Salto
 
 
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
