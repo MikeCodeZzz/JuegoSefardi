@@ -10,4 +10,3 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	collision_shape_2d.set_deferred("disabled", true)
 	meta_activada.emit()
 	
-	

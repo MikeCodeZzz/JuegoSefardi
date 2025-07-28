@@ -9,5 +9,4 @@ func _ready() -> void:
 	
 func _on_meta_activada() -> void:
 	InputManager.input_enabled = false
-	get_parent().velocity = Vector2.ZERO
-	
+	get_parent().velocity = Vector2.ZERO	

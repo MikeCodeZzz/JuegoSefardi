@@ -1,12 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://dk2c3arspmnbg"]
+[gd_scene load_steps=31 format=3 uid="uid://dk2c3arspmnbg"]
 
 [ext_resource type="Script" uid="uid://xfcsac8bkkbo" path="res://codigo/jugador.gd" id="1_6smm8"]
 [ext_resource type="Texture2D" uid="uid://6oy7hy7yoax4" path="res://recursos/sprites/knight.png" id="1_ht635"]
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://bbbcu2baqeyuh" path="res://codigo/procesar_llegar_a_final_del_nivel.gd" id="3_njcx7"]
-=======
 [ext_resource type="AudioStream" uid="uid://djyhp7ck8n27q" path="res://recursos/sounds/jump.wav" id="3_njcx7"]
->>>>>>> 014193a (Sonido de muerte)
+[ext_resource type="Script" uid="uid://btywq16j3qnv7" path="res://codigo/procesar_llegar_al_final_del_nivel.gd" id="4_xutah"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpodt"]
 atlas = ExtResource("1_ht635")
@@ -211,12 +208,10 @@ autoplay = "reposo"
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_p8tnr")
 
-<<<<<<< HEAD
-[node name="ProcesarLlegarAFinalDelNivel" type="Node" parent="."]
-script = ExtResource("3_njcx7")
-=======
 [node name="Salto" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_njcx7")
 volume_db = -12.235
 bus = &"Efectos"
->>>>>>> 014193a (Sonido de muerte)
+
+[node name="ProcesarLlegarAlFinalDelNivel" type="Node2D" parent="."]
+script = ExtResource("4_xutah")
